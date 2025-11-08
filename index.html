@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Club Penguin — Battle Zone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1 class="main-title">
+        🐧✨ CLUB PENGUIN: BATTLE ZONE ✨🐧
+      </h1>
+      <h2 class="subtitle">¡Prepárate para sobrevivir en el hielo estelar!</h2>
+    </header>
+
+    <div class="info creative-info">
+      <div class="info-box score-box">
+        ⭐ Puntos: <span id="score">0</span>
+      </div>
+
+      <div class="info-box lives-box">
+        ❤️ Vidas: <span id="lives">1</span>
+      </div>
+
+      <div class="info-box time-box">
+        ⏳ Tiempo restante:
+        <div class="time-display">
+          <span id="time">120</span>s
+        </div>
+      </div>
+    </div>
+
+    <div id="game" class="game" tabindex="0" aria-label="Área de juego">
+      <img id="player" src="player.svg" class="player" alt="Hechicero">
+    </div>
+
+    <div class="controls">
+      <button id="start" class="btn-start">🚀 Comenzar Batalla</button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <footer class="footer">
+      Controles: ← → (mover), Barra espaciadora (disparar)
+    </footer>
+
+  </div>
+
+  <!-- sonidos locales -->
+  <audio id="sndShoot" src="shoot.wav" preload="auto"></audio>
+  <audio id="sndHit" src="hit.wav" preload="auto"></audio>
+  <audio id="sndDeath" src="death.wav" preload="auto"></audio>
+  <audio id="sndStart" src="start.wav" preload="auto"></audio>
+  <audio id="sndBg" src="bg_loop.wav" preload="auto" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,145 @@
+/* style.css */
+
+/* ❄️ Paleta Club Penguin (azules fríos + amarillos cálidos) */
+:root{
+  --bg:#b9e8ff;             /* Azul hielo claro */
+  --panel:#0a72b1;          /* Azul Club Penguin clásico */
+  --accent:#ffd200;         /* Amarillo cálido tipo logo */
+  --muted:#ffffff;          /* Blanco nieve */
+}
+
+*{box-sizing:border-box}
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial;
+  background:linear-gradient(180deg,#b9e8ff,#79c7ff);
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:20px;
+}
+
+/* ❄️ Panel estilo hielo */
+.container{
+  width:960px;
+  max-width:80%;
+  background:rgba(255,255,255,0.35);
+  padding:14px;
+  border-radius:16px;
+  border:2px solid rgba(255,255,255,0.6);
+  box-shadow:0 0 12px rgba(0,0,0,0.15);
+}
+
+/* ✨ Título estilo Club Penguin */
+header h1{
+  margin:0;
+  color:var(--panel);
+  text-shadow:0px 2px 0px #ffffff, 0 0 10px rgba(0,0,0,0.2);
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.info{
+  display:flex;
+  gap:18px;
+  margin:10px 0;
+  font-weight:700;
+  color:#003d66;
+}
+
+/* 🎮 Área estilo iglú */
+.game{
+  position:relative;
+  height:480px;
+  background:linear-gradient(180deg,#e6f7ff,#b8e9ff);
+  border-radius:10px;
+  overflow:hidden;
+  border:2px solid rgba(255,255,255,0.8);
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Jugador */
+.player{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:18px;
+  width:92px;
+  height:92px;
+  transition:left 0.08s linear;
+}
+
+/* Proyectil estilo hielo */
+.projectile{
+  position:absolute;
+  width:32px;
+  height:12px;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  filter:drop-shadow(0 0 5px #94e3ff);
+}
+
+/* Enemigos estilo puffles */
+.enemy{
+  position:absolute;
+  width:64px;
+  height:64px;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  filter:drop-shadow(0 0 8px #ffd200);
+}
+
+.controls{
+  display:flex;
+  gap:8px;
+  margin:10px 0;
+  justify-content:flex-end;
+}
+
+/* Botón estilo Club Penguin (azul + amarillo) */
+button{
+  background:linear-gradient(180deg,#0a72b1,#064d7d);
+  color:white;
+  border:2px solid #ffd200;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:800;
+  letter-spacing:0.5px;
+  box-shadow:0 0 8px rgba(0,0,0,0.25);
+  transition:0.2s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  background:linear-gradient(180deg,#0c89d6,#07639d);
+  box-shadow:0 0 12px rgba(255,210,0,0.8);
+}
+
+.message{
+  margin-top:8px;
+  color:var(--accent);
+  font-weight:900;
+  text-align:center;
+  text-shadow:0 0 6px rgba(255,255,255,0.5);
+}
+
+.footer{
+  margin-top:8px;
+  color:#003d66;
+  font-size:13px;
+  text-align:center;
+}
+
+@media(max-width:700px){ 
+  .game{height:360px} 
+  .player{width:72px;height:72px} 
+  .enemy{width:48px;height:48px} 
+}
